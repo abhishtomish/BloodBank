@@ -1,0 +1,25 @@
+.slider1{
+    color: red;
+}
+
+#navlink{
+    margin-left: 1025px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#home{
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}

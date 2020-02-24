@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    {% block content %}
+       
+        <div class="slider">
+            <div class="slider-items">
+                <div class="item active">
+                    <img src="{% static 'images/img.jpg' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img1.jpg' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img2.jpg' %}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{% static 'images/img3.jpg' %}" alt="">
+                </div>
+            </div>
+
+            <div class="left-slide"><</div>
+            <div class="right-slide">></div>
+        </div>
+
+        <div style="color:black; margin:10px;">
+            <h2 class="css-13i30ag"><div><a name="overview"> Overview</a></div></h2>
+            <p>There’s no end to the benefits of donating blood for those who need it. According to the <a href="https://www.redcrossblood.org/donate-blood/how-to-donate/how-blood-donations-help/blood-needs-blood-supply.html" target="_blank" rel="noopener noreferrer" class="content-link css-5r4717">American Red Cross</a>, one donation can save as many as three lives, and someone in the United States needs blood every two seconds. </p>    
+            <p>It turns out that donating blood doesn’t just benefit recipients. There are health benefits for donors, too, on top of the benefits that come from helping others. Read on to learn the health benefits of donating blood and the reasons behind them.</p>
+            <div class="css-0"><span style="font-size:0"></span><h2><div><a name="benefits"> Benefits</a></div></h2><p>Donating blood has benefits for your emotional and physical health. According to a report by the <a href="https://www.mentalhealth.org.uk/publications/doing-good-altruism-and-wellbeing-age-austerity" target="_blank" rel="noopener noreferrer" class="content-link css-5r4717">Mental Health Foundation</a>, helping others can:</p><ul><li>reduce stress</li><li>improve your emotional well-being</li><li>benefit your physical health</li><li>help get rid of negative feelings</li><li>provide a sense of belonging and reduce isolation</li></ul><p>Research has found further evidence of the health benefits that come specifically from donating blood.</p><h3>Free health checkup</h3><p>In order to give blood, you’re required to undergo a health screening. A trained staff member performs this checkup. They’ll check your:</p><ul><li>pulse</li><li>blood pressure</li><li>body temperature</li><li>hemoglobin levels</li></ul><p>This free mini-physical can offer excellent insight into your health. It can effectively detect problems that could indicate an underlying medical condition or risk factors for certain diseases.</p><p>Your blood is also tested for several diseases. These include:</p><ul><li><a href="#" class="content-link css-5r4717">hepatitis B</a></li><li><a href="/health/hepatitis-c" class="content-link css-5r4717">hepatitis C</a></li><li><a href="/health/hiv-aids" class="content-link css-5r4717">HIV</a></li><li><a href="/health/west-nile-virus" class="content-link css-5r4717">West Nile virus</a></li><li><a href="/health/std/syphilis" class="content-link css-5r4717">syphilis</a></li><li><a href="/health/kissing-bug-bite" class="content-link css-5r4717"><em>Trypanosoma cruzi</em></a></li></ul><a class="content-link css-30rb2" href="/health/kissing-bug-bite"></a><div class="swoopContainer"><div id="swoopAd"></div></div><div class="css-1cg0byz"><span style="font-size: 0px;"></span><aside class="css-0"><div><div data-empty="true" class="css-az6x7v"><div class="css-1hjaa0k"><span class="css-7mq29v bt-uid-tg" data-uid="5ac2690fe0-160"></span></div><div id="inline1__slot" data-ad="true" class="css-eykv1o"></div></div></div></aside><span style="font-size: 0px;"></span></div></div>
+            <div class="css-0"><span style="font-size:0"></span><h2><div><a name="on-heart-disease"> Does donating blood
+                lower your risk of heart disease?</a></div></h2><p>The research is mixed on whether blood donation actually lowers risk of heart disease and heart attack. </p><p><hl-trusted-source source="PubMed Central" rationale="Highly respected database from the National Institutes of Health" class="css-12hs4c5"><a href="https://www.ncbi.nlm.nih.gov/pubmed/28797569" target="_blank" rel="noopener noreferrer" class="content-link css-5r4717">A 2017 study<span class="css-1mdvjzu icon-hl-trusted-source-after"><span class="sro">Trusted Source</span></span></a><span></span></hl-trusted-source> suggests that regular blood donations are associated with increased risk of heart disease possibly due to unfavorable cholesterol levels<span style="text-decoration:line-through;"></span></p><p>However, donating blood regularly may lower iron stores, according to a <hl-trusted-source source="PubMed Central" rationale="Highly respected database from the National Institutes of Health" class="css-12hs4c5"><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3663474/" target="_blank" rel="noopener noreferrer" class="content-link css-5r4717">2013 study<span class="css-1mdvjzu icon-hl-trusted-source-after"><span class="sro">Trusted Source</span></span></a><span></span></hl-trusted-source>. This may reduce the risk of heart attack. High body iron stores are believed to increase the risk of heart attack.</p><p>Regular blood donations were <hl-trusted-source source="PubMed Central" rationale="Highly respected database from the National Institutes of Health" class="css-12hs4c5"><a href="https://www.ncbi.nlm.nih.gov/pubmed/26643612" target="_blank" rel="noopener noreferrer" class="content-link css-5r4717">thought to lower blood pressure<span class="css-1mdvjzu icon-hl-trusted-source-after"><span class="sro">Trusted Source</span></span></a><span></span></hl-trusted-source>, but <hl-trusted-source source="PubMed Central" rationale="Highly respected database from the National Institutes of Health" class="css-12hs4c5"><a href="https://www.ncbi.nlm.nih.gov/pubmed/28083954" target="_blank" rel="noopener noreferrer" class="content-link css-5r4717">a 2017 study<span class="css-1mdvjzu icon-hl-trusted-source-after"><span class="sro">Trusted Source</span></span></a><span></span></hl-trusted-source> suggests these observations are deceiving and are not a real physiological response. </p><div id="hl-incontent-video-ad" class="css-1sxbpyw"></div><div id="div-gpt-ad-out-of-page" class="css-1h5aco8"></div><div class="css-umsscj"><aside class="css-0"><div><div data-empty="true" class="css-10gx9pb"><div class="css-1hjaa0k"></div><div id="inline2__slot" data-ad="true" class="css-12zon3z"></div></div></div></aside></div></div>
+                <div class="css-0"><span style="font-size:0"></span><h2><div><a name="side-effects"> Side effects of
+                    donating blood</a></div></h2><p>Blood donation is safe for healthy adults. There’s no risk of contracting disease. New, sterile equipment is used for each donor. </p><p>Some people may feel nauseous, lightheaded, or dizzy after donating blood. If this happens, it should only last a few minutes. You can lie down with your feet up at the until you feel better.</p><p>You may also experience some bleeding at the site of the needle. Applying pressure and raising your arm for a couple of minutes will usually stop this. You may develop a bruise at the site.</p><p>Call the blood donation center if:</p><ul><li>You still feel lightheaded, dizzy, or nauseous after drinking, eating, and resting.</li><li>You develop a raised bump or continue bleeding at the needle site.</li><li>You have arm pain, numbness, or tingling.</li></ul><div class="css-1cg0byz"><span style="font-size: 0px;"></span><aside class="css-0"><div><div data-empty="true" class="css-az6x7v"><div class="css-1hjaa0k"></div><div id="inline3__slot" data-ad="true" class="css-eykv1o"></div></div></div></aside><span style="font-size: 0px;"></span></div></div>
+        </div>
+    
+        <script src="{% static 'JS/slider.js' %}"></script>
+
+    {% endblock %}
+</body>
+</html>

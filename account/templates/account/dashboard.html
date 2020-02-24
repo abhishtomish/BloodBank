@@ -1,0 +1,49 @@
+{% extends 'account/account_base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}Dashboard..{{user.username}}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    {% block content %}
+
+    <!-- shows the details of user -->
+    <div class="text-center">
+        {% if request.user.is_authenticated %}
+        <h1 class="mt-2 text-center">Welcome {{request.user.username}}</h1>
+        <hr class="mt-0 mb-4 text-left">
+        <p class="mt-0 mb-4 text-left"></p>Email: {{request.user.email}}</p>
+        <p class="mt-0 mb-4 text-left"></p>Date of birth: {{request.user.date_of_birth}}</p>
+        <p>Blood Group: {{request.user.blood_group}}</p>
+        <p>Total Donation: {{request.user.total_donation}}</p>
+        <p>Total Received: {{request.user.total_received}}</p>
+        <p><a href="#">Visit our donation camp</a></p>
+        <p><a href="#">Request blood</a></p>
+        {% else %}
+        <p><a href="{% url 'register' %}">Register</a></p>
+        {% endif %}
+    </div>
+
+    <!-- Shows the details of blood  -->
+    <div class="card text-left" style="width: 18rem; margin-top:10px; margin-left:525px">
+        <div class="card-body">
+          <h5 class="card-title">Available Blood Unit</h5>
+          <p class="card-text col-4"><label>
+              {% for b in blood %}
+                {% if b.unit_available >= 100 %}
+                <p style="color: green;">{{b.bg_group}} : {{b.unit_available}}</p>
+                {% else %}
+                <p style="color: red;">{{b.bg_group}} : {{b.unit_available}}</p>
+                {% endif %}
+              {% endfor %}
+          </label></p>
+        </div>
+      </div>
+
+    {% endblock %}    
+</body>
+</html>

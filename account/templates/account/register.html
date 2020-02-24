@@ -1,0 +1,67 @@
+{% extends 'account/account_base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+<body>
+    {% block content %}
+    <style type="text/css">
+      .form-signin .form-control:focus {
+      z-index: 2;
+      }
+      .form-signin input[type="email"] {
+      margin-bottom: 10px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      }
+      .form-signin input[type="text"] {
+          margin-bottom: 10px;
+          border-bottom-right-radius: 0;
+          border-bottom-left-radius: 0;
+          }
+      .form-signin input[type="password"] {
+      margin-bottom: -1px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      }
+      .h3{
+          text-align: center;
+      }
+  </style>
+  <body class="text-center">
+      <form class="form-signin" style="width:300px; margin-left:525px; margin:auto;" method="post">{% csrf_token %}
+          <div class="d-flex flex-column pb-3">
+              <img class="image-fluid mx-auto d-block" src="{% static 'images/login.jpg' %}" alt="loading..." width="72" height="72">
+          </div>
+          <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+          
+  
+            <div class="p-2 form-control">
+                {% for field in registration_form %}
+                <p><label class="text-left">{{field.name}}</label><span class="text-right">{{field}}</span></p>
+                {% endfor %}
+            </div>
+          
+          {% for field in registration_form %}
+              <p>
+                  {%for error in field.errors%}
+                      <p style="color: red margin 0px;">{{error}}</p>
+                  {% endfor %}
+              </p>
+          {% endfor %}
+  
+          {% if registration_form.non_field_errors %}
+              <div style="color: red;"><p>{{registration_form.non_field_errors}}</p></div>
+          {% endif %}
+  
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+          <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+      </form>
+    {% endblock %}
+</body>
+</html>zz

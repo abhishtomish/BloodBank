@@ -1,0 +1,44 @@
+{% extends 'account/account_base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}Update Info{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+    {% block content %}
+    <form action="#" class="form-signin" style="width:300px; margin-left:525px;" method="POST">{% csrf_token %}
+        <!-- <div class="imgcontainer">
+          <img src="{% static 'images/login.jpg' %}" alt="Avatar" class="avatar">
+        </div> -->
+        <h1 class="h3 mb-3 font-weight-normal text-center">Update details</h1>
+        <div class="p-2 form-control">
+            {% for field in update_form %}
+            <p>{{field}}</p>
+            {% endfor %}
+        </div>
+        {% for field in update_form %}
+          <p>
+              {%for error in field.errors%}
+                  <p style="color: red margin 0px;">{{error}}</p>
+              {% endfor %}
+          </p>
+      {% endfor %}
+
+      {% if update_form.non_field_errors %}
+          <div style="color: red;"><p>{{update_form.non_field_errors}}</p></div>
+      {% endif %}
+
+
+      <button class="btn btn-lg btn-success btn-block" type="submit">Update</button>
+      <p><a href="{% url 'password_change' %}">Change Password</a></p>
+      <p><a href="{% url 'password_reset' %}">Reset Password</a></p>
+
+      </form>
+      {% endblock %}
+</body>
+</html>

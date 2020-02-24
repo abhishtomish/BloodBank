@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block title %}Details{% endblock %}
+{% block content %}
+    {% for b in blood %}
+        <h1>{{b.type}}</h1>
+    {% endfor %}
+{% endblock %}
