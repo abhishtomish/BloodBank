@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager
+from blood.models import Blood
 
 class MyAccountManager(BaseUserManager):    # To Support custom user model
     def create_user(self, email, username, password=None):
@@ -41,16 +42,19 @@ class Account(AbstractBaseUser):
     is_staff            = models.BooleanField(default=False)
     is_superuser        = models.BooleanField(default=False)
     date_of_birth       = models.DateField(blank=True, null=True)
-    bg_choices          = [
-        ('A+','A+'),
-        ('A-','A-'),
-        ('B+','B+'),
-        ('B-','B-'),
-        ('O+','O+'),
-        ('O-','O-'),
-        ('AB+','AB+'),
-        ('AB-','AB-')
-    ]
+    blood = Blood.objects.all()
+    print(blood)
+    bg_choices = [(i.bg_group, i.bg_group) for i in blood]
+    # bg_choices          = [
+    #     ('A+','A+'),
+    #     ('A-','A-'),
+    #     ('B+','B+'),
+    #     ('B-','B-'),
+    #     ('O+','O+'),
+    #     ('O-','O-'),
+    #     ('AB+','AB+'),
+    #     ('AB-','AB-')
+    # ]
     blood_group     = models.CharField(max_length=6, choices=bg_choices)
     total_donation  = models.IntegerField(default=0)
     total_received  = models.IntegerField(default=0)
